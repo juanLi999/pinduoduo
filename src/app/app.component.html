@@ -1,4 +1,6 @@
-<ul>
-  <li *ngFor='let item of menus; let i = index'>
-    <a href="#" [class.chose]='i === selectedItem' (click)='handle(i)'>{{item.title}}</a></li>
-</ul>
+<script src="components/scrollable-tab/scrollable-tab.component.spec.ts"></script>
+<app-scrollable-tab [menus]='topMenus'
+                    tabSelectedColor ='purple'
+                    tabColor = 'red'
+                    indicatorColor = 'pink'
+                    backgroundColor="#ccc" (selectTab)='handelSelected($event)'></app-scrollable-tab>
